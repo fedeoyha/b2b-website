@@ -1,0 +1,169 @@
+@import url('https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap');
+
+:root {
+  /* Palette */
+  --bg-primary: #050505;
+  /* Darker, deeper black */
+  --bg-secondary: #0A0A0A;
+  --surface-glass: rgba(255, 255, 255, 0.03);
+  --surface-glass-hover: rgba(255, 255, 255, 0.06);
+
+  --accent-primary: #6366f1;
+  /* Indigo 500 - More vibrant */
+  --accent-glow: rgba(99, 102, 241, 0.4);
+
+  --accent-success: #10b981;
+  /* Emerald 500 */
+  --accent-success-glow: rgba(16, 185, 129, 0.3);
+
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  /* Zinc 400 */
+  /* AutoMates Brand Colors */
+  --bg-primary: #F3F0E2;
+  /* Beige Claro */
+  --bg-secondary: #EBE7D5;
+  /* Slightly darker beige for cards/sections */
+  --text-primary: #1D1D1B;
+  /* Gris Oscuro */
+  --text-secondary: #15503A;
+  /* Verde Botella - used for subtitles/accents */
+  --accent-primary: #1E9370;
+  /* Verde Esmeralda */
+  --accent-secondary: #15503A;
+  /* Verde Botella */
+  --accent-glow: rgba(30, 147, 112, 0.3);
+
+  /* Functional Colors */
+  --success: #1E9370;
+  --error: #D32F2F;
+  --warning: #F57C00;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 5rem;
+
+  /* Typography */
+  --font-heading: 'Fraunces', serif;
+  /* Fallback for Fresh Mango */
+  --font-body: 'General Sans', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* UI Elements */
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+  --border-radius-full: 9999px;
+
+  --nav-height: 80px;
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.4s ease;
+  --transition-slow: 0.8s ease;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Shared Utility Classes for Consistency */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+  width: 100%;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.section-label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  color: var(--accent-primary);
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: var(--spacing-sm);
+  background: linear-gradient(to bottom, #fff, #a1a1aa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (max-width: 768px) {
+    font-size: 2.25rem;
+  }
+}
+
+.section-description {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #fff, #999);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--text-primary);
+
+  span {
+    color: var(--accent-primary);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 5px;
+  border: 2px solid var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}

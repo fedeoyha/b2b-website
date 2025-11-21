@@ -1,0 +1,120 @@
+.section {
+    padding: var(--spacing-xl) 0;
+    background: var(--bg-primary);
+    border-top: 1px solid rgba(29, 29, 27, 0.05);
+}
+
+.header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl);
+}
+
+.label {
+    display: inline-block;
+    font-family: var(--font-mono);
+    color: var(--accent-primary);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.1;
+    font-weight: 800;
+
+    @media (max-width: 768px) {
+        font-size: 2.5rem;
+    }
+}
+
+.description {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.faqList {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.faqItem {
+    background: var(--bg-secondary);
+    border: 1px solid rgba(29, 29, 27, 0.05);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    transition: all var(--transition-medium);
+
+    &:hover {
+        border-color: var(--accent-primary);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    &.open {
+        .icon {
+            transform: rotate(180deg);
+        }
+
+        .answerWrapper {
+            max-height: 500px;
+            padding: 0 var(--spacing-lg) var(--spacing-md);
+        }
+    }
+}
+
+.question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    transition: color var(--transition-fast);
+
+    &:hover {
+        color: var(--accent-primary);
+    }
+
+    span {
+        flex: 1;
+        padding-right: var(--spacing-md);
+    }
+}
+
+.icon {
+    flex-shrink: 0;
+    color: var(--accent-primary);
+    transition: transform var(--transition-medium);
+}
+
+.answerWrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: all var(--transition-medium);
+    padding: 0 var(--spacing-lg);
+}
+
+.answer {
+    color: var(--text-primary);
+    opacity: 0.8;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
