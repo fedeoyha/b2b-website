@@ -99,51 +99,51 @@ export default function Pricing() {
                         {/* Data Rows */}
                         <div className={styles.matrixRow}>
                             <div className={styles.matrixFeature}>{t.pricing.comparisonRows.logic.name}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.logic.blueprint}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.logic.sprint}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.logic.partner}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.blueprint}>{t.pricing.comparisonRows.logic.blueprint}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.sprint}>{t.pricing.comparisonRows.logic.sprint}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.partner}>{t.pricing.comparisonRows.logic.partner}</div>
                         </div>
 
                         <div className={styles.matrixRow}>
                             <div className={styles.matrixFeature}>{t.pricing.comparisonRows.implementation.name}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.implementation.blueprint}</div>
-                            <div className={styles.matrixCell}><span className={styles.check}>{t.pricing.comparisonRows.implementation.sprint}</span></div>
-                            <div className={styles.matrixCell}><span className={styles.check}>{t.pricing.comparisonRows.implementation.partner}</span></div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.blueprint}>{t.pricing.comparisonRows.implementation.blueprint}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.sprint}><span className={styles.check}>{t.pricing.comparisonRows.implementation.sprint}</span></div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.partner}><span className={styles.check}>{t.pricing.comparisonRows.implementation.partner}</span></div>
                         </div>
 
                         <div className={styles.matrixRow}>
                             <div className={styles.matrixFeature}>{t.pricing.comparisonRows.scope.name}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.scope.blueprint}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.scope.sprint}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.scope.partner}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.blueprint}>{t.pricing.comparisonRows.scope.blueprint}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.sprint}>{t.pricing.comparisonRows.scope.sprint}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.partner}>{t.pricing.comparisonRows.scope.partner}</div>
                         </div>
 
                         <div className={styles.matrixRow}>
                             <div className={styles.matrixFeature}>{t.pricing.comparisonRows.maintenance.name}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.maintenance.blueprint}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.maintenance.sprint}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.maintenance.partner}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.blueprint}>{t.pricing.comparisonRows.maintenance.blueprint}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.sprint}>{t.pricing.comparisonRows.maintenance.sprint}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.partner}>{t.pricing.comparisonRows.maintenance.partner}</div>
                         </div>
 
                         <div className={styles.matrixRow}>
                             <div className={styles.matrixFeature}>{t.pricing.comparisonRows.support.name}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.support.blueprint}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.support.sprint}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.support.partner}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.blueprint}>{t.pricing.comparisonRows.support.blueprint}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.sprint}>{t.pricing.comparisonRows.support.sprint}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.partner}>{t.pricing.comparisonRows.support.partner}</div>
                         </div>
 
                         <div className={styles.matrixRow}>
                             <div className={styles.matrixFeature}>{t.pricing.comparisonRows.sla.name}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.sla.blueprint}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.sla.sprint}</div>
-                            <div className={styles.matrixCell}><span className={styles.check}>{t.pricing.comparisonRows.sla.partner}</span></div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.blueprint}>{t.pricing.comparisonRows.sla.blueprint}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.sprint}>{t.pricing.comparisonRows.sla.sprint}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.partner}><span className={styles.check}>{t.pricing.comparisonRows.sla.partner}</span></div>
                         </div>
 
                         <div className={styles.matrixRow}>
                             <div className={styles.matrixFeature}>{t.pricing.comparisonRows.billing.name}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.billing.blueprint}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.billing.sprint}</div>
-                            <div className={styles.matrixCell}>{t.pricing.comparisonRows.billing.partner}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.blueprint}>{t.pricing.comparisonRows.billing.blueprint}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.sprint}>{t.pricing.comparisonRows.billing.sprint}</div>
+                            <div className={styles.matrixCell} data-plan={t.pricing.comparisonHeaders.partner}>{t.pricing.comparisonRows.billing.partner}</div>
                         </div>
                     </div>
                 </div>
