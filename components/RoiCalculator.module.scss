@@ -3,6 +3,14 @@
     background: var(--bg-primary);
     position: relative;
     z-index: 20;
+
+    @media (max-width: 768px) {
+        padding: var(--spacing-lg) 0;
+    }
+
+    @media (max-width: 480px) {
+        padding: var(--spacing-md) 0;
+    }
 }
 
 .header {
@@ -33,6 +41,10 @@
     @media (max-width: 768px) {
         font-size: 2.5rem;
     }
+
+    @media (max-width: 480px) {
+        font-size: 2rem;
+    }
 }
 
 .subtitle {
@@ -58,6 +70,11 @@
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
         padding: var(--spacing-lg);
+    }
+
+    @media (max-width: 480px) {
+        padding: var(--spacing-md);
+        gap: var(--spacing-md);
     }
 }
 
@@ -163,6 +180,11 @@
     text-align: center;
     transition: all 0.2s;
     appearance: textfield;
+
+    @media (max-width: 480px) {
+        font-size: 1.75rem;
+        padding: 1rem;
+    }
 
     &:focus {
         outline: none;

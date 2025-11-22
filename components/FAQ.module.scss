@@ -2,6 +2,14 @@
     padding: var(--spacing-xl) 0;
     background: var(--bg-primary);
     border-top: 1px solid rgba(29, 29, 27, 0.05);
+
+    @media (max-width: 768px) {
+        padding: var(--spacing-lg) 0;
+    }
+
+    @media (max-width: 480px) {
+        padding: var(--spacing-md) 0;
+    }
 }
 
 .header {
@@ -31,6 +39,10 @@
 
     @media (max-width: 768px) {
         font-size: 2.5rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 2rem;
     }
 }
 
@@ -88,6 +100,11 @@
     font-weight: 700;
     color: var(--text-primary);
     transition: color var(--transition-fast);
+
+    @media (max-width: 480px) {
+        font-size: 1.1rem;
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
 
     &:hover {
         color: var(--accent-primary);

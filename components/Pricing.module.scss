@@ -2,6 +2,14 @@
     padding: var(--spacing-xl) 0;
     background: var(--bg-primary);
     position: relative;
+
+    @media (max-width: 768px) {
+        padding: var(--spacing-lg) 0;
+    }
+
+    @media (max-width: 480px) {
+        padding: var(--spacing-md) 0;
+    }
 }
 
 .header {
@@ -32,6 +40,10 @@
     @media (max-width: 768px) {
         font-size: 2.5rem;
     }
+
+    @media (max-width: 480px) {
+        font-size: 2rem;
+    }
 }
 
 /* Unified Grid Wrapper */
@@ -50,6 +62,10 @@
     @media (max-width: 968px) {
         grid-template-columns: 1fr;
     }
+
+    @media (max-width: 480px) {
+        gap: var(--spacing-sm);
+    }
 }
 
 /* Light Card - The Blueprint */
@@ -62,6 +78,10 @@
     position: relative;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 480px) {
+        padding: var(--spacing-md);
+    }
 
     &:hover {
         transform: translateY(-5px);

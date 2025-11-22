@@ -5,6 +5,14 @@
     position: relative;
     overflow: hidden;
 
+    @media (max-width: 768px) {
+        padding: 100px 0 var(--spacing-lg);
+    }
+
+    @media (max-width: 480px) {
+        padding: 90px 0 var(--spacing-md);
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -51,6 +59,10 @@
         @media (max-width: 768px) {
             font-size: 2.5rem;
         }
+
+        @media (max-width: 480px) {
+            font-size: 2rem;
+        }
     }
 
     p {
@@ -87,6 +99,10 @@
     padding: var(--spacing-lg);
     border-radius: var(--border-radius-lg);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+
+    @media (max-width: 480px) {
+        padding: var(--spacing-md);
+    }
 }
 
 .grid {

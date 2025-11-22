@@ -2,6 +2,10 @@
     padding: var(--spacing-lg) 0;
     border-bottom: 1px solid rgba(29, 29, 27, 0.05);
     background: var(--bg-primary);
+
+    @media (max-width: 480px) {
+        padding: var(--spacing-md) 0;
+    }
 }
 
 .label {

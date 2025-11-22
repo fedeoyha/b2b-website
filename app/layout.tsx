@@ -12,6 +12,11 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   title: "AutoMates - Expert Automation Solutions",
   description: "Transform your business operations with intelligent automation",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+  },
 };
 
 export default function RootLayout({

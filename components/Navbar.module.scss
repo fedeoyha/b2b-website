@@ -19,6 +19,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 768px) {
+        padding: 0 var(--spacing-sm);
+    }
+
+    @media (max-width: 480px) {
+        padding: 0 1rem;
+    }
 }
 
 .logo {
@@ -28,6 +36,10 @@
     color: var(--text-primary);
     letter-spacing: -0.03em;
     text-decoration: none;
+
+    @media (max-width: 480px) {
+        font-size: 1.5rem;
+    }
 
     span {
         color: var(--accent-primary);
