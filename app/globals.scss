@@ -1,24 +1,6 @@
 @import url('https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap');
 
 :root {
-  /* Palette */
-  --bg-primary: #050505;
-  /* Darker, deeper black */
-  --bg-secondary: #0A0A0A;
-  --surface-glass: rgba(255, 255, 255, 0.03);
-  --surface-glass-hover: rgba(255, 255, 255, 0.06);
-
-  --accent-primary: #6366f1;
-  /* Indigo 500 - More vibrant */
-  --accent-glow: rgba(99, 102, 241, 0.4);
-
-  --accent-success: #10b981;
-  /* Emerald 500 */
-  --accent-success-glow: rgba(16, 185, 129, 0.3);
-
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1aa;
-  /* Zinc 400 */
   /* AutoMates Brand Colors */
   --bg-primary: #F3F0E2;
   /* Beige Claro */
@@ -36,8 +18,13 @@
 
   /* Functional Colors */
   --success: #1E9370;
+  --accent-success: #10b981;
+  --accent-success-glow: rgba(16, 185, 129, 0.3);
   --error: #D32F2F;
   --warning: #F57C00;
+
+  /* Layout */
+  --container-width: 1400px;
 
   /* Spacing */
   --spacing-xs: 0.5rem;

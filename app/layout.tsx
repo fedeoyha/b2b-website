@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fraunces } from "next/font/google";
 import "./globals.scss";
 import { LanguageProvider } from "@/contexts/LanguageContext";
@@ -12,11 +12,12 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   title: "AutoMates - Expert Automation Solutions",
   description: "Transform your business operations with intelligent automation",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({
