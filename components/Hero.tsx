@@ -39,6 +39,9 @@ export default function Hero() {
                 scrub: true
             }
         });
+
+        // Refresh ScrollTrigger to ensure correct positioning
+        ScrollTrigger.refresh();
     }, []);
 
     const addToStars = (el: HTMLDivElement | null) => {
