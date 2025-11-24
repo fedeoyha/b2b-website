@@ -3,14 +3,39 @@
 import styles from './Clients.module.scss';
 import { useLanguage } from '@/contexts/LanguageContext';
 
+import { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Clients() {
     const { t } = useLanguage();
+    const sectionRef = useRef<HTMLElement>(null);
     const clients = [
         "TechFlow", "Nexus", "Vertex", "Orbital", "Quantum", "Synergy"
     ];
 
+    useEffect(() => {
+        if (sectionRef.current) {
+            gsap.fromTo(
+                sectionRef.current,
+                { opacity: 0 },
+                {
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: 'top 90%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        }
+    }, []);
+
     return (
-        <section className={styles.section}>
+        <section className={styles.section} ref={sectionRef}>
             <div className="container">
                 <p className={styles.label}>{t.clients.label}</p>
                 <div className={styles.marqueeContainer}>

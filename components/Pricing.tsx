@@ -4,8 +4,35 @@ import Link from 'next/link';
 import styles from './Pricing.module.scss';
 import { useLanguage } from '@/contexts/LanguageContext';
 
+import { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Pricing() {
     const { t } = useLanguage();
+    const wrapperRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (wrapperRef.current) {
+            gsap.fromTo(
+                wrapperRef.current.children,
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: wrapperRef.current,
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        }
+    }, []);
 
     return (
         <section className={styles.section} id="pricing">
@@ -16,7 +43,7 @@ export default function Pricing() {
                 </div>
 
                 {/* Unified Grid Wrapper */}
-                <div className={styles.pricingWrapper}>
+                <div className={styles.pricingWrapper} ref={wrapperRef}>
                     {/* Pricing Cards Row */}
                     <div className={styles.cardsRow}>
                         {/* The Blueprint */}
