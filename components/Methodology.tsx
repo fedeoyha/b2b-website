@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import styles from './Methodology.module.scss';
 import { useLanguage } from '@/contexts/LanguageContext';
 
