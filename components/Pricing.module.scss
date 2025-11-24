@@ -247,14 +247,16 @@
 .cta {
     width: 100%;
     padding: 1rem;
-    border-radius: var(--border-radius-full);
-    font-weight: 600;
-    font-size: 1rem;
+    border-radius: var(--radius-full);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-base);
     cursor: pointer;
-    transition: all var(--transition-fast);
+    transition: all var(--transition-base);
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    margin-top: auto;
+    /* Push to bottom of flex container */
 }
 
 .ctaOutline {
