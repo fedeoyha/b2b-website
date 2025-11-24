@@ -26,8 +26,9 @@ export default function Clients() {
                     duration: 1,
                     scrollTrigger: {
                         trigger: sectionRef.current,
-                        start: 'top 90%',
-                        toggleActions: 'play none none none'
+                        start: 'top 75%',
+                        end: 'bottom 25%',
+                        toggleActions: 'play reverse play reverse'
                     }
                 }
             );

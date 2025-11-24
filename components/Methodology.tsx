@@ -26,8 +26,9 @@ export default function Methodology() {
                     ease: 'power3.out',
                     scrollTrigger: {
                         trigger: step,
-                        start: 'top 90%',
-                        toggleActions: 'play none none none'
+                        start: 'top 75%',
+                        end: 'bottom 25%',
+                        toggleActions: 'play reverse play reverse'
                     }
                 }
             );

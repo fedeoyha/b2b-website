@@ -26,8 +26,9 @@ export default function Pricing() {
                     stagger: 0.2,
                     scrollTrigger: {
                         trigger: wrapperRef.current,
-                        start: 'top 85%',
-                        toggleActions: 'play none none none'
+                        start: 'top 75%',
+                        end: 'bottom 25%',
+                        toggleActions: 'play reverse play reverse'
                     }
                 }
             );
