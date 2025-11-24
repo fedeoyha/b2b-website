@@ -1,24 +1,30 @@
 .section {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-2xl) 0;
     background: var(--bg-primary);
     border-bottom: 1px solid rgba(29, 29, 27, 0.05);
 
-    @media (max-width: 480px) {
-        padding: var(--spacing-md) 0;
+    @media (max-width: 768px) {
+        padding: var(--spacing-xl) 0;
+    }
+
+    @media (max-width: 640px) {
+        padding: var(--spacing-lg) 0;
     }
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--spacing-md);
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
 
-    @media (max-width: 900px) {
+    @media (min-width: 640px) {
         grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
     }
 
-    @media (max-width: 600px) {
-        grid-template-columns: 1fr;
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--spacing-lg);
     }
 }
 
@@ -27,12 +33,21 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
+    transition: transform var(--transition-base);
+
+    @media (min-width: 768px) {
+        padding: var(--spacing-xl);
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+    }
 }
 
 .icon {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-sm);
+    font-size: var(--text-2xl);
+    margin-bottom: var(--spacing-md);
     color: var(--accent-primary);
     background: rgba(30, 147, 112, 0.1);
     width: 60px;
@@ -40,20 +55,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--border-radius-full);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-base);
+
+    .item:hover & {
+        background: rgba(30, 147, 112, 0.15);
+        transform: scale(1.05);
+    }
 }
 
 .title {
     font-family: var(--font-heading);
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--spacing-xs);
     color: var(--text-primary);
 }
 
 .description {
-    font-size: 0.95rem;
+    font-size: var(--text-sm);
     color: var(--text-primary);
     opacity: 0.7;
-    line-height: 1.5;
+    line-height: var(--leading-normal);
 }
