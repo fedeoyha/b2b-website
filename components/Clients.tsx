@@ -15,15 +15,13 @@ export default function Clients() {
                 <p className={styles.label}>{t.clients.label}</p>
                 <div className={styles.marqueeContainer}>
                     <div className={styles.marquee}>
-                        {clients.map((client, index) => (
-                            <div key={`first-${index}`} className={styles.logo}>
-                                {client}
-                            </div>
-                        ))}
-                        {clients.map((client, index) => (
-                            <div key={`second-${index}`} className={styles.logo}>
-                                {client}
-                            </div>
+                        {/* Duplicate 3 times for seamless infinite scroll */}
+                        {[...Array(3)].map((_, setIndex) => (
+                            clients.map((client, index) => (
+                                <div key={`${setIndex}-${index}`} className={styles.logo}>
+                                    {client}
+                                </div>
+                            ))
                         ))}
                     </div>
                 </div>
