@@ -94,11 +94,11 @@
 }
 
 .icon {
-    font-size: var(--text-3xl);
+    font-size: var(--text-4xl);
     margin-bottom: var(--spacing-md);
     background: rgba(30, 147, 112, 0.1);
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,8 +106,14 @@
     color: var(--accent-primary);
     transition: all var(--transition-base);
 
+    @media (min-width: 768px) {
+        width: 90px;
+        height: 90px;
+        font-size: 2.5rem;
+    }
+
     .serviceCard:hover & {
-        background: rgba(30, 147, 112, 0.15);
+        background: rgba(30, 147, 112, 0.2);
         transform: scale(1.1);
     }
 }

@@ -46,21 +46,27 @@
 }
 
 .icon {
-    font-size: var(--text-2xl);
+    font-size: var(--text-4xl);
     margin-bottom: var(--spacing-md);
     color: var(--accent-primary);
     background: rgba(30, 147, 112, 0.1);
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: var(--radius-full);
     transition: all var(--transition-base);
 
+    @media (min-width: 768px) {
+        width: 90px;
+        height: 90px;
+        font-size: 2.5rem;
+    }
+
     .item:hover & {
-        background: rgba(30, 147, 112, 0.15);
-        transform: scale(1.05);
+        background: rgba(30, 147, 112, 0.2);
+        transform: scale(1.1);
     }
 }
 
