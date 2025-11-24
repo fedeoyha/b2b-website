@@ -4,8 +4,35 @@ import styles from './Services.module.scss';
 import { Zap, Plane, Bot } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
+import { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Services() {
     const { t } = useLanguage();
+    const gridRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (gridRef.current) {
+            gsap.fromTo(
+                gridRef.current.children,
+                { y: 30, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.6,
+                    stagger: 0.1,
+                    scrollTrigger: {
+                        trigger: gridRef.current,
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        }
+    }, []);
 
     return (
         <section className={styles.section}>
@@ -15,7 +42,7 @@ export default function Services() {
                     <h2 className={styles.title}>{t.services.title}</h2>
                 </div>
 
-                <div className={styles.grid}>
+                <div className={styles.grid} ref={gridRef}>
                     <div className={styles.serviceCard}>
                         <div className={styles.icon}>
                             <Zap size={32} strokeWidth={1.5} />
