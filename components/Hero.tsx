@@ -83,10 +83,13 @@ export default function Hero() {
                 </div>
                 <div className={styles.visual}>
                     <div className={styles.imageWrapper}>
-                        <img
-                            src="/mascota1.avif"
-                            alt="AutoMates Mascot"
+                        <video
+                            src="/Mascota_Animada_1.mp4"
                             className={styles.characterImage}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
                         />
                     </div>
                 </div>
