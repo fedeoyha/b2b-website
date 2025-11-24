@@ -108,15 +108,19 @@
     background: #E8E4D8;
     border: 1px solid rgba(29, 29, 27, 0.1);
     padding: var(--spacing-lg);
-    border-radius: var(--border-radius-md);
-    transition: all var(--transition-medium);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
     position: relative;
     display: flex;
     flex-direction: column;
 
+    @media (min-width: 768px) {
+        padding: var(--spacing-xl);
+    }
+
     &:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--shadow-lg);
     }
 
     .cardTitle,
@@ -139,15 +143,19 @@
     background: #1A1A1A;
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: var(--spacing-lg);
-    border-radius: var(--border-radius-md);
-    transition: all var(--transition-medium);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
     position: relative;
     display: flex;
     flex-direction: column;
 
+    @media (min-width: 768px) {
+        padding: var(--spacing-xl);
+    }
+
     &:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: var(--shadow-xl);
     }
 
     .cardTitle,
