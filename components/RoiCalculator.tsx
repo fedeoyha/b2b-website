@@ -40,18 +40,16 @@ export default function RoiCalculator() {
 
     useEffect(() => {
         if (sectionRef.current) {
-            gsap.fromTo(
+            gsap.from(
                 sectionRef.current,
-                { opacity: 0, y: 50 },
                 {
-                    opacity: 1,
-                    y: 0,
+                    opacity: 0,
+                    y: 50,
                     duration: 0.8,
                     scrollTrigger: {
                         trigger: sectionRef.current,
-                        start: 'top 75%',
-                        end: 'bottom 25%',
-                        toggleActions: 'play reverse play reverse'
+                        start: 'top 95%',
+                        toggleActions: 'play none none none'
                     }
                 }
             );

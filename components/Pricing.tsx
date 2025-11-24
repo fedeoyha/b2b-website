@@ -16,19 +16,17 @@ export default function Pricing() {
 
     useEffect(() => {
         if (wrapperRef.current) {
-            gsap.fromTo(
+            gsap.from(
                 wrapperRef.current.children,
-                { y: 50, opacity: 0 },
                 {
-                    y: 0,
-                    opacity: 1,
+                    y: 50,
+                    opacity: 0,
                     duration: 0.8,
                     stagger: 0.2,
                     scrollTrigger: {
                         trigger: wrapperRef.current,
-                        start: 'top 75%',
-                        end: 'bottom 25%',
-                        toggleActions: 'play reverse play reverse'
+                        start: 'top 95%',
+                        toggleActions: 'play none none none'
                     }
                 }
             );

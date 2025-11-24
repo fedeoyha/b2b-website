@@ -17,21 +17,17 @@ export default function Methodology() {
         const steps = stepsRef.current;
 
         steps.forEach((step, index) => {
-            gsap.fromTo(step,
-                { opacity: 0, y: 50 },
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.8,
-                    ease: 'power3.out',
-                    scrollTrigger: {
-                        trigger: step,
-                        start: 'top 75%',
-                        end: 'bottom 25%',
-                        toggleActions: 'play reverse play reverse'
-                    }
+            gsap.from(step, {
+                opacity: 0,
+                y: 50,
+                duration: 0.8,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: step,
+                    start: 'top 95%',
+                    toggleActions: 'play none none none'
                 }
-            );
+            });
         });
     }, []);
 

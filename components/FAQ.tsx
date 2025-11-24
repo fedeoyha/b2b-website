@@ -20,19 +20,17 @@ export default function FAQ() {
 
     useEffect(() => {
         if (listRef.current) {
-            gsap.fromTo(
+            gsap.from(
                 listRef.current.children,
-                { y: 30, opacity: 0 },
                 {
-                    y: 0,
-                    opacity: 1,
+                    y: 30,
+                    opacity: 0,
                     duration: 0.6,
                     stagger: 0.1,
                     scrollTrigger: {
                         trigger: listRef.current,
-                        start: 'top 75%',
-                        end: 'bottom 25%',
-                        toggleActions: 'play reverse play reverse'
+                        start: 'top 95%',
+                        toggleActions: 'play none none none'
                     }
                 }
             );

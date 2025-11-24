@@ -18,17 +18,15 @@ export default function Clients() {
 
     useEffect(() => {
         if (sectionRef.current) {
-            gsap.fromTo(
+            gsap.from(
                 sectionRef.current,
-                { opacity: 0 },
                 {
-                    opacity: 1,
+                    opacity: 0,
                     duration: 1,
                     scrollTrigger: {
                         trigger: sectionRef.current,
-                        start: 'top 75%',
-                        end: 'bottom 25%',
-                        toggleActions: 'play reverse play reverse'
+                        start: 'top 95%',
+                        toggleActions: 'play none none none'
                     }
                 }
             );
