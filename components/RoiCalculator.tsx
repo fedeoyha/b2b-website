@@ -23,37 +23,11 @@ export default function RoiCalculator() {
     const yearlyLoss = monthlyLoss * 12;
 
     useEffect(() => {
-        if (resultsRef.current) {
-            gsap.fromTo(
-                resultsRef.current.querySelectorAll('.result-item'),
-                { scale: 0.9, opacity: 0 },
-                {
-                    scale: 1,
-                    opacity: 1,
-                    duration: 0.5,
-                    stagger: 0.1,
-                    ease: 'back.out(1.7)',
-                }
-            );
-        }
+        // This useEffect was for GSAP animation, now it's empty or can be removed if no other logic is needed.
     }, [monthlyLoss, yearlyLoss]);
 
     useEffect(() => {
-        if (sectionRef.current) {
-            gsap.from(
-                sectionRef.current,
-                {
-                    opacity: 0,
-                    y: 50,
-                    duration: 0.8,
-                    scrollTrigger: {
-                        trigger: sectionRef.current,
-                        start: 'top 95%',
-                        toggleActions: 'play none none none'
-                    }
-                }
-            );
-        }
+        // This useEffect was for GSAP animation, now it's empty or can be removed if no other logic is needed.
     }, []);
 
     return (

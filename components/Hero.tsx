@@ -2,63 +2,19 @@
 
 import styles from './Hero.module.scss';
 import Link from 'next/link';
-import { useRef, useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '@/contexts/LanguageContext';
-
-gsap.registerPlugin(ScrollTrigger);
-
 export default function Hero() {
     const { t, language } = useLanguage();
-    const containerRef = useRef<HTMLDivElement>(null);
-    const starsRef = useRef<HTMLDivElement[]>([]);
-
-    useEffect(() => {
-        const stars = starsRef.current;
-
-        stars.forEach((star, i) => {
-            gsap.to(star, {
-                y: '+=20',
-                rotation: i % 2 === 0 ? 10 : -10,
-                duration: 2 + i,
-                repeat: -1,
-                yoyo: true,
-                ease: 'sine.inOut',
-                delay: i * 0.5
-            });
-        });
-
-        gsap.to(stars, {
-            yPercent: -50,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: containerRef.current,
-                start: 'top top',
-                end: 'bottom top',
-                scrub: true
-            }
-        });
-
-        // Refresh ScrollTrigger to ensure correct positioning
-        ScrollTrigger.refresh();
-    }, []);
-
-    const addToStars = (el: HTMLDivElement | null) => {
-        if (el && !starsRef.current.includes(el)) {
-            starsRef.current.push(el);
-        }
-    };
 
     return (
-        <section className={styles.hero} ref={containerRef}>
-            <div className={styles.star} style={{ top: '15%', left: '5%' }} ref={addToStars}>
+        <section className={styles.hero}>
+            <div className={styles.star} style={{ top: '15%', left: '5%' }}>
                 <StarIcon size={48} />
             </div>
-            <div className={styles.star} style={{ top: '25%', right: '10%' }} ref={addToStars}>
+            <div className={styles.star} style={{ top: '25%', right: '10%' }}>
                 <StarIcon size={64} />
             </div>
-            <div className={styles.star} style={{ bottom: '20%', left: '15%' }} ref={addToStars}>
+            <div className={styles.star} style={{ bottom: '20%', left: '15%' }}>
                 <StarIcon size={32} />
             </div>
 

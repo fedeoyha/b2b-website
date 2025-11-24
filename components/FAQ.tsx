@@ -4,38 +4,14 @@ import { useState, useRef, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 import styles from './FAQ.module.scss';
 import { useLanguage } from '@/contexts/LanguageContext';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function FAQ() {
     const { t } = useLanguage();
     const [openIndex, setOpenIndex] = useState<number | null>(null);
-    const listRef = useRef<HTMLDivElement>(null);
 
     const toggleFAQ = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
     };
-
-    useEffect(() => {
-        if (listRef.current) {
-            gsap.from(
-                listRef.current.children,
-                {
-                    y: 30,
-                    opacity: 0,
-                    duration: 0.6,
-                    stagger: 0.1,
-                    scrollTrigger: {
-                        trigger: listRef.current,
-                        start: 'top 95%',
-                        toggleActions: 'play none none none'
-                    }
-                }
-            );
-        }
-    }, []);
 
     return (
         <section className={styles.section} id="faq">
@@ -45,7 +21,7 @@ export default function FAQ() {
                     <h2 className={styles.title}>{t.faq.title}</h2>
                 </div>
 
-                <div className={styles.faqList} ref={listRef}>
+                <div className={styles.faqList}>
                     {t.faq.items.map((item, index) => (
                         <div
                             key={index}

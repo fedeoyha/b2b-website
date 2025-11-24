@@ -1,41 +1,12 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './Methodology.module.scss';
 import { useLanguage } from '@/contexts/LanguageContext';
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Methodology() {
     const { t } = useLanguage();
     const sectionRef = useRef<HTMLElement>(null);
-    const stepsRef = useRef<HTMLDivElement[]>([]);
-
-    useEffect(() => {
-        const steps = stepsRef.current;
-
-        steps.forEach((step, index) => {
-            gsap.from(step, {
-                opacity: 0,
-                y: 50,
-                duration: 0.8,
-                ease: 'power3.out',
-                scrollTrigger: {
-                    trigger: step,
-                    start: 'top 95%',
-                    toggleActions: 'play none none none'
-                }
-            });
-        });
-    }, []);
-
-    const addToRefs = (el: HTMLDivElement | null) => {
-        if (el && !stepsRef.current.includes(el)) {
-            stepsRef.current.push(el);
-        }
-    };
 
     return (
         <section className={styles.section} id="how-it-works" ref={sectionRef}>
@@ -49,26 +20,26 @@ export default function Methodology() {
                 </div>
 
                 <div className={styles.grid}>
-                    <div className={styles.card} ref={addToRefs}>
+                    <div className={styles.card}>
                         <div className={styles.stepNumber}>01</div>
                         <h3>{t.methodology.step1.title}</h3>
                         <p>{t.methodology.step1.description}</p>
                     </div>
 
-                    <div className={styles.card} ref={addToRefs}>
+                    <div className={styles.card}>
                         <div className={styles.stepNumber}>02</div>
                         <h3>{t.methodology.step2.title}</h3>
                         <p>{t.methodology.step2.description}</p>
                     </div>
 
-                    <div className={styles.card} ref={addToRefs}>
+                    <div className={styles.card}>
                         <div className={styles.stepNumber}>03</div>
                         <h3>{t.methodology.step3.title}</h3>
                         <p>{t.methodology.step3.description}</p>
                     </div>
                 </div>
 
-                <div className={styles.lowCodeSection} ref={addToRefs}>
+                <div className={styles.lowCodeSection}>
                     <h3>{t.methodology.lowCode.title}</h3>
                     <p>{t.methodology.lowCode.description}</p>
                 </div>
